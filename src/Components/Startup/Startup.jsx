@@ -1,6 +1,5 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaComments } from "react-icons/fa";
-import heroImage from "./assets/heroImage.jpg";
 
 const Startup = () => {
   return (
@@ -19,7 +18,6 @@ const Startup = () => {
             <span className="absolute inset-x-0 bottom-0 h-[6px] bg-orange-500 opacity-60 rounded-full"></span>
           </span>
         </h1>
-
         <p className="text-gray-600 text-base leading-relaxed">
           One-stop destination for all things startups need,
           simplifying your journey from idea to success.
@@ -74,7 +72,7 @@ const Startup = () => {
       <div className="relative mt-12 md:mt-0 md:w-[45%] flex justify-center">
         <div className="relative">
           <img
-            src={heroImage}
+            src={"https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"}
             alt="Startup Hero"
             className="rounded-full shadow-xl w-[320px] md:w-[400px] object-cover"
           />

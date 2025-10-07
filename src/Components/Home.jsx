@@ -3,6 +3,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import slide1 from "../assets/slide1.jpg";
 import slide2 from "../assets/slide2.jpg";
 import slide3 from "../assets/slide3.jpg";
+import Startup from "./Startup/Startup";
 
 const Home = () => {
   const slides = [
@@ -42,6 +43,7 @@ const Home = () => {
     setCurrent(current === 0 ? slides.length - 1 : current - 1);
 
   return (
+    <>
     <div
       className="relative w-full h-screen overflow-hidden mt-[75px] rounded-lg group"
       onMouseEnter={() => setIsHovered(true)}
@@ -92,6 +94,8 @@ const Home = () => {
         <FaChevronRight className="text-gray-700" />
       </button>
     </div>
+    <Startup />
+    </> 
   );
 };
 
