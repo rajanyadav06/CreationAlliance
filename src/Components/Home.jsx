@@ -94,7 +94,6 @@ const Home = () => {
         <FaChevronRight className="text-gray-700" />
       </button>
     </div>
-    <Startup />
     </> 
   );
 };
