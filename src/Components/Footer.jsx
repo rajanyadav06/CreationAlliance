@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaYoutube, FaTelegramPlane } from "react-icons/fa";
-import { MdLocationOn, MdEmail } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
