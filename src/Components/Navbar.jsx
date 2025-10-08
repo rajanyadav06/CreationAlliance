@@ -1,15 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => setOpenMenu(!openMenu);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        // scrolling down
+        setShowNavbar(false);
+      } else {
+        // scrolling up
+        setShowNavbar(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+    <nav
+      className={`w-full bg-white shadow-md fixed top-0 left-0 z-50 transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 h-12">
@@ -22,13 +44,13 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-          <li className="hover:text-blue-600 cursor-pointer">Startup</li>
+          <Link to="strartup" className="hover:text-blue-600 cursor-pointer">Startup</Link>
 
           {/* Registrations Dropdown */}
           <li className="relative group cursor-pointer">
-            <div className="flex items-center gap-1">
+            <Link to="registration" className="flex items-center gap-1">
               Registrations <FaChevronDown size={12} />
-            </div>
+            </Link>
 
             <div className="absolute left-0 top-6 hidden group-hover:block bg-white shadow-lg rounded-md p-4 w-[460px]">
               <div className="grid grid-cols-2 gap-4 text-gray-700 text-sm">
@@ -71,14 +93,13 @@ const Navbar = () => {
             </div>
           </li>
 
-          <li className="hover:text-blue-600 cursor-pointer">Trademark</li>
-          <li className="hover:text-blue-600 cursor-pointer">GST</li>
-          <li className="hover:text-blue-600 cursor-pointer">Digital Service</li>
+          <Link to="trademark" className="hover:text-blue-600 cursor-pointer">Trademark</Link>
+          <Link to="gst" className="hover:text-blue-600 cursor-pointer">GST</Link>
+          <Link to="digital-service" className="hover:text-blue-600 cursor-pointer">Digital Service</Link>
         </ul>
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          
           <button className="bg-blue-600 text-white px-4 py-1.5 rounded-md hover:bg-blue-700 text-sm">
             Sign Up
           </button>

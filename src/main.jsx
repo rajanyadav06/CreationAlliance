@@ -6,6 +6,12 @@ import Home from './Components/Home/Home.jsx';
 import About from './Components/About';
 import ReactDOM from "react-dom/client";
 import React from "react";
+import Contact from './Components/Contact-Us/Contact.jsx';
+import DigitalService from './Components/Digital-Service/DigitalService.jsx';
+import Gst from './Components/GST/Gst.jsx';
+import Registration from './Components/Registrations/Regirstion.jsx';
+import Trademark from './Components/Trademark/Trademark.jsx';
+import Startup from './Components/Startup/Startup.jsx';
 
 
 const router = createBrowserRouter([
@@ -23,9 +29,33 @@ const router = createBrowserRouter([
 
       },
       {
+        path:"strartup",
+        element:<Startup/>,
+      },
+      {
         path: "about",
         element: <About />,
       },
+      {
+        path: "contact-us",
+        element: <Contact />,
+      },
+      {
+        path:"digital-service",
+        element:<DigitalService/>,
+      },
+      {
+        path:"gst",
+        element:<Gst/>,
+      },
+      {
+        path:"registration",
+        element:<Registration/>,
+      },
+      {
+        path:"trademark",
+        element:<Trademark/>,
+      }
     ],
   },
 ]);

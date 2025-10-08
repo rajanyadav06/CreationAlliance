@@ -1,11 +1,13 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaComments } from "react-icons/fa";
+import Support from "./Support";
 
 const Startup = () => {
   return (
-    <section className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 bg-white">
+    <>
+    <section className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-20 bg-gradient-to-br from-white via-[#f8fafc] to-[#eef2ff] overflow-hidden">
       {/* Left Content */}
-      <div className="max-w-xl text-left space-y-5">
+      <div className="max-w-xl text-left space-y-5 md:space-y-6">
         <p className="text-orange-500 font-semibold text-lg">
           Welcome to
         </p>
@@ -18,18 +20,19 @@ const Startup = () => {
             <span className="absolute inset-x-0 bottom-0 h-[6px] bg-orange-500 opacity-60 rounded-full"></span>
           </span>
         </h1>
+
         <p className="text-gray-600 text-base leading-relaxed">
-          One-stop destination for all things startups need,
-          simplifying your journey from idea to success.
+          Your one-stop destination for everything a startup needs —
+          from idea validation to launch, scaling, and funding.
         </p>
 
         <p className="text-gray-700 text-lg">
-          Need ANY kind of <span className="text-orange-500 font-semibold">HELP</span> with your startup?
+          Need any kind of <span className="text-orange-500 font-semibold">HELP</span> with your startup?
         </p>
 
         {/* Contact Button */}
         <div className="flex items-center gap-4">
-          <button className="bg-[#1b1c4b] hover:bg-[#2a2b6a] text-white px-8 py-3 rounded-full font-medium transition-all">
+          <button className="bg-[#1b1c4b] hover:bg-[#2a2b6a] text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105">
             Contact Now
           </button>
 
@@ -48,20 +51,20 @@ const Startup = () => {
           </h3>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6">
-            <div className="text-center">
-              <p className="text-[#1b1c4b] font-medium">📘</p>
+            <div className="text-center hover:scale-105 transition-transform">
+              <p className="text-[#1b1c4b] text-3xl">📘</p>
               <p className="font-semibold mt-1">Planning & Mentoring</p>
             </div>
-            <div className="text-center">
-              <p className="text-orange-500 font-medium">📈</p>
+            <div className="text-center hover:scale-105 transition-transform">
+              <p className="text-orange-500 text-3xl">📈</p>
               <p className="font-semibold mt-1">Launch & Growth</p>
             </div>
-            <div className="text-center">
-              <p className="text-[#1b1c4b] font-medium">📢</p>
+            <div className="text-center hover:scale-105 transition-transform">
+              <p className="text-[#1b1c4b] text-3xl">📢</p>
               <p className="font-semibold mt-1">Pitch Readiness</p>
             </div>
-            <div className="text-center">
-              <p className="text-orange-500 font-medium">💰</p>
+            <div className="text-center hover:scale-105 transition-transform">
+              <p className="text-orange-500 text-3xl">💰</p>
               <p className="font-semibold mt-1">Fundraising</p>
             </div>
           </div>
@@ -69,28 +72,35 @@ const Startup = () => {
       </div>
 
       {/* Right Image Section */}
-      <div className="relative mt-12 md:mt-0 md:w-[45%] flex justify-center">
+      <div className="relative mt-16 md:mt-0 md:w-[48%] flex justify-center">
         <div className="relative">
           <img
-            src={"https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"}
+            src={
+              "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            }
             alt="Startup Hero"
-            className="rounded-full shadow-xl w-[320px] md:w-[400px] object-cover"
+            className="rounded-full shadow-2xl w-[380px] sm:w-[460px] md:w-[520px] object-cover transition-transform duration-500 hover:scale-105"
           />
 
           {/* 1500+ Startups */}
-          <div className="absolute top-10 right-0 bg-white px-4 py-2 rounded-xl shadow-md border border-gray-100">
+          <div className="absolute top-10 right-4 bg-white px-5 py-3 rounded-xl shadow-md border border-gray-100">
             <p className="text-[#1b1c4b] font-bold text-lg">1500+</p>
             <p className="text-sm text-gray-500 -mt-1">Startups</p>
           </div>
 
           {/* Top-Notch Badge */}
-          <div className="absolute bottom-10 left-0 bg-white px-4 py-2 rounded-xl shadow-md border border-gray-100">
+          <div className="absolute bottom-10 left-4 bg-white px-5 py-3 rounded-xl shadow-md border border-gray-100">
             <p className="text-orange-500 font-bold">Top-Notch</p>
             <p className="text-sm text-gray-500 -mt-1">Consultants</p>
           </div>
+          {/* Soft Glow Behind Image */}
+          <div className="absolute inset-0 bg-orange-500 opacity-20 blur-3xl rounded-full -z-10"></div>
         </div>
       </div>
     </section>
+    <h1 className=" text-yellow-300 font-bold text-center text-3xl">Support</h1>
+    <Support />
+    </>
   );
 };
 
