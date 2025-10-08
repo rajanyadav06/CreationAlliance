@@ -55,10 +55,10 @@ const Footer = () => {
               Service
             </h4>
             <ul className="space-y-2 text-sm text-gray-300 flex flex-col ">
-              <Link to="ngo-registion" className=" hover:text-blue-400 transition">Startup</Link>
-              <Link to="trust" className=" hover:text-blue-400 transition">Registrations</Link>
-              <Link to="section" className=" hover:text-blue-400 transition">Trademark</Link>
-              <Link to="gst-registion" className=" hover:text-blue-400 transition">Digital Service</Link>
+              <Link to="strartup" className=" hover:text-blue-400 transition">Startup</Link>
+              <Link to="registration" className=" hover:text-blue-400 transition">Registrations</Link>
+              <Link to="trademark" className=" hover:text-blue-400 transition">Trademark</Link>
+              <Link to="digital-service" className=" hover:text-blue-400 transition">Digital Service</Link>
             </ul>
           </div>
 

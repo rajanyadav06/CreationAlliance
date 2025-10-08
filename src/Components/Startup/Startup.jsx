@@ -1,6 +1,9 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaComments } from "react-icons/fa";
 import Support from "./Support";
+import Section from "./section";
+import StartupServices from "./StartupService";
+import Testimonials from "../Home/Testimonials";
 
 const Startup = () => {
   return (
@@ -100,6 +103,9 @@ const Startup = () => {
     </section>
     <h1 className=" text-yellow-300 font-bold text-center text-3xl">Support</h1>
     <Support />
+    <Section />
+    <StartupServices />
+    <Testimonials />
     </>
   );
 };
